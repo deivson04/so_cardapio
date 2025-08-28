@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('numero_celular', 20);
             $table->string('senha', 60);
+            $table->boolean('is_admin')->default(false);
             $table->softDeletes();
             $table->timestamps();
         });

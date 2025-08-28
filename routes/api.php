@@ -5,8 +5,8 @@ use App\Http\Controllers\MainController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/register', [AuthController::class, 'register']);
+Route::post('/usuarios/login', [AuthController::class, 'login']);
+Route::post('/usuarios/register', [AuthController::class, 'register']);
 
 
 
@@ -26,7 +26,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
 
     Route::get('/usuarios', [MainController::class, 'index']);
-    Route::post('/inserir', [MainController::class, 'store']);
+    //Route::post('/inserir', [MainController::class, 'store']);
     Route::get('/usuarios/buscar/{id}', [MainController::class, 'show']);
     Route::put('/usuarios/atualizar/{id}', [MainController::class, 'update']);
     Route::delete('/usuarios/remover/{id}', [MainController::class, 'destroy']);

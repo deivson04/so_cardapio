@@ -36,7 +36,7 @@ class AuthController extends Controller
 
         // 5. Resposta de sucesso
         return response()->json([
-            'message' => 'Login de administrador realizado com sucesso!',
+            'message' => 'Login realizado com sucesso!',
             'user' => $user
         ]);
     }
@@ -46,16 +46,19 @@ class AuthController extends Controller
         $request->validate([
             'nome' => 'required|string|max:255',
              'email' => 'nullable|string',
+             'numero_celular' => 'nullable|string',
              'senha' => 'nullable|string',
          ]);
 
          $usuarios = Users::create([
              'nome' => $request->input('nome'),
              'email' => $request->input('email'),
+             'numero_celular' => $request->input('numero_celular'),
+             'senha' => $request->input('senha'),
          ]); 
          
          return response()->json([
-             'mensagem' => 'Usuario logado com sucesso',
+             'mensagem' => 'Usuario cadastrado com sucesso',
          ]);
    }
 }

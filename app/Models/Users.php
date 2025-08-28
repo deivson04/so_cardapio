@@ -20,6 +20,7 @@ class Users extends Model
         'email',
         'numero_celular',
         'senha',
+        'is_admin',
     ];
 
     protected $casts = [

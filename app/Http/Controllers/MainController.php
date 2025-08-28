@@ -24,7 +24,7 @@ class MainController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-     public function store(Request $request)
+     /*public function store(Request $request)
     {
          $request->validate([
             'nome' => 'required|string|max:255',
@@ -42,7 +42,7 @@ class MainController extends Controller
          return response()->json([
              'mensagem' => 'Usuario cadastrado com sucesso',
          ]);
-     }
+     }*/
 
     /**
      * Display the specified resource.
